@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
     font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
@@ -47,16 +49,16 @@ section {
     text-align: center;
     font-size: 3rem;
     font-weight: normal;
-    color: #fff;
+    color: orange;
     margin-bottom: 3rem;
 }
 
 .heading-1 {
-    font-family: 'Poppins', 'Raleway', sans-serif;
+    font-family: 'Playfair', 'Raleway', sans-serif;
     text-align: center;
     font-size: 3rem;
     font-weight: bold;
-    color: orange;
+    color: black
     margin-bottom: 3rem;
 }
 
@@ -89,6 +91,7 @@ header {
     background: #07101c;
     z-index: 1000;
     padding: 1.5rem 9%;
+    
 }
 
 header .logo {
@@ -171,10 +174,17 @@ header .navbar ul li a:hover {
     font-size: 2.5rem;
     color: rgb(255, 255, 255);
 }
-
+.home .content h1 {
+    font-family: 'playfair', sans-serif; /* Använd den nya fonten */
+    font-weight: 600; /* Justera vikten för en snyggare rubrik */
+    color: white; /* Behåll samma färg eller justera efter behov */
+    font-size: 2.5rem; /* Justera storleken efter behov */
+    text-align: left; /* Centrera texten */
+}
 .home .content h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-size: 4rem;
+    font-weight: 400;
     color: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -220,19 +230,25 @@ header .navbar ul li a:hover {
     color: orange; /* Samma hover-effekt som i headern */
 }
 .center-headline {
+    
+    font-family: 'Playfair', sans-serif;
+    
+    font-weight: 400;
+   
     text-align: center; /* Centrera texten horisontellt */
-    text-decoration: underline;
-    font-size: 2.5rem; /* Justera storleken efter behov */
-    margin: ; /* Lägg till marginaler för att ge utrymme runt rubriken */
+    font-size: 4rem; /* Justera storleken efter behov */
+    
     position: relative;
     top: 50%; /* Flytta rubriken till mitten av skärmen vertikalt */
     transform: translateY(-50%); /* Justera för att centrera exakt */
+    margin-top: 5%;
 }
 .swiper {
     display: flex;
     justify-content: center;
     align-items: center;
-   margin-bottom: 5%;
+    margin-top: 0.2rem;
+   margin-bottom: 1%;
    aspect-ratio: 16 / 9;
    height: 35rem;
    width: 100%;
@@ -279,6 +295,24 @@ header .navbar ul li a:hover {
   .swiper-slide img:hover {
     transform: scale(1.1);
   }
+  
+@media (max-width: 1024px) {
+    .swiper-slide {
+        font-size: 16px; /* Justera textstorleken för mindre skärmar */
+    }
+}
+
+@media (max-width: 768px) {
+    .swiper-slide {
+        font-size: 14px; /* Justera textstorleken för mindre skärmar */
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        font-size: 12px; /* Justera textstorleken för mindre skärmar */
+    }
+}
 
 .icons-container {
     min-height: auto;
@@ -316,11 +350,12 @@ header .navbar ul li a:hover {
 .icons-container .icons .info p {
     font-size: 1.2rem;
     color: #666;
+    padding: 1rem;
 }
 
 .h2-event{
     margin-bottom: 5rem;
-    font-family: Outfit ;
+    font-family: 'Railway', sans-serif;
 }
 /* event grid */
 .event-grid{
@@ -329,7 +364,7 @@ grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 background-color: rgb(255, 255, 255);
 gap: 2rem;
 padding: 5%;
-margin: 5%;
+margin: 0% 5% 5% 5%;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -398,94 +433,28 @@ background-color: rgba(255, 255, 255, 0.719);
 
 
 .service {
-    background: #07101c;
-    margin-bottom: 5%;
+    
+    margin: 5%;
+    border-radius: 25px;
+    padding: 5%;
 }
 
-.service .box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.service .box-container .box {
-    background: #1f2020;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    padding: 3rem;
-    margin: 3rem;
-    width: 32rem;
-    border-radius: 20px;
-    flex: 1 1 25rem;
-}
-
-.service .box-container .box:hover {
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-    color: rgba(244, 149, 6, 0.5);
-}
-
-.service .box-container .box h3 {
-    font-size: 2rem;
-    color: orange;
-    text-align: center;
-}
-
-.service .box-container .box p {
-    font-size: 1.4rem;
-    color: whitesmoke;
+.service-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
     padding: 2rem 0;
 }
-
-.service .box-container .box .btn {
-    padding: .7rem 4rem;
-    display: inline-block;
-    margin-top: 1.5rem;
-    font-size: 1.7rem;
-    color: #ffffff;
-    border: .1rem solid #DEE4EE;
+.service-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+    
 
-.service .box-container .box .btn:hover {
-    background: orange;
-    color: #07101c;
-}
 
-.vadvigor {
-    background: #07101c;
-}
 
-.vadvigor .box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
 
-.vadvigor .box-container .box {
-    background: whitesmoke;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    margin: 2rem;
-    width: 95%;
-    border-radius: 20px;
-    color: black;
-}
-
-.vadvigor .box-container .box:hover {
-    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
-    box-shadow: 2 1rem 2rem rgba(255, 255, 255, 0.5);
-}
-
-.vadvigor .box-container .box h3 {
-    text-align: center;
-    font-size: 3rem;
-    color: black;
-    padding: 1em;
-    text-decoration: underline;
-}
-
-.vadvigor .box-container .box p {
-    font-size: 1.4rem;
-    color: black;
-    padding: 1rem 0;
-}
 
 .process {
     background: whitesmoke;
@@ -707,31 +676,9 @@ background-color: rgba(255, 255, 255, 0.719);
 }
 
 
-.service .box-container .box h3{
-    font-size: 2rem;
-    color: orange;
-    text-align: center;
-}
 
-.service .box-container .box p{
-    font-size: 1.4rem;
-    color: whitesmoke;
-    padding:2rem 0;
-}
-.service .box-container .box .btn{
-    padding:.7rem 4rem;
-    display: inline-block;
-    margin-top: 1.5rem;
-    font-size: 1.7rem;
-    color:#ffffff;
-    border:.1rem solid #DEE4EE;
-}
 
-.service .box-container .box .btn:hover{
-    background:orange;
-    color: #07101c;
-   
-}
+
 .vadvigor{
     background: #07101c;
 }
@@ -1111,83 +1058,14 @@ background-color: rgba(255, 255, 255, 0.719);
     background: #07101c;
 }
 
-.service .box-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
 
-    
-    
-}
 
-.service .box-container .box{
-    background:#1f2020;
-    border:.1rem solid rgba(0,0,0,.1);
-    padding:3rem;
-    margin:3rem;
-    width:32rem;
-    border-radius: 20px;
-    
-    flex:1 1 25rem;
-}
-
-.service .box-container .box:hover{
-    
-    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-    color: rgba(244, 149, 6, 0.5);
-
-    
-}
 
     
 
-/*
-.service .box-container .box img{
-    width:7rem;
-    margin:2rem 0;
-}
-*/
-.service .box-container .box h3{
-    font-size: 2rem;
-    color: orange;
-    text-align: center;
-}
 
-.service .box-container .box p{
-    font-size: 1.4rem;
-    color: whitesmoke;
-    padding:2rem 0;
-}
-.service .box-container .box .btn{
-    padding:.7rem 4rem;
-    display: inline-block;
-    margin-top: 1.5rem;
-    font-size: 1.7rem;
-    color:#ffffff;
-    border:.1rem solid #DEE4EE;
-}
 
-.service .box-container .box .btn:hover{
-    background:orange;
-    color: #07101c;
-   
-}
 
-/*
-.service .box-container .box img{
-    width:7rem;
-    margin:2rem 0;
-}
-*/
-.vadvigor .box-container .box h3{
-    text-align: center;
-    font-size: 3rem;
-    color: black;
-    padding: 1em;
-    text-decoration: underline;
-    
-}
 
 .vadvigor .box-container .box p{
     font-size: 1.4rem;
