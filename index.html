@@ -1,1341 +1,487 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomerna</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<head>
+    <!-- ... befintlig kod ... -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <!-- ... befintlig kod ... -->
+</head>
 
-* {
-    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-transform: none;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all .2s linear;
-}
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-.text-orange {
-    color: orange;
-}
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
 
-section {
-    min-height: 100vh;
-    padding: 0 9%;
-    padding-top: 7.5rem;
-}
-
-.btn {
-    padding: .7rem 4rem;
-    display: inline-block;
-    margin-top: 1.5rem;
-    font-size: 1.7rem;
-    color: #ffffff;
-    border: .1rem solid #DEE4EE;
-}
-
-.btn:hover {
-    background: #f0f0f0;
-}
-
-.heading {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: normal;
-    color: orange;
-    margin-bottom: 3rem;
-}
-
-.heading-1 {
-    font-family: 'Playfair', 'Raleway', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-    color: black
-    margin-bottom: 3rem;
-}
-
-.description {
-    font-size: 1.7rem;
-    color: #ffffff;
-    width: 80rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.description-1 {
-    font-size: 1.7rem;
-    color: svart;
-    max-width: 80rem;
-    margin: 0 auto;
-    text-align: center;
-    word-wrap: wrap;
-}
-
-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #07101c;
-    z-index: 1000;
-    padding: 1.5rem 9%;
+</head>
+<body>
     
-}
+<!-- header section starts  -->
 
-header .logo {
-    width: 300px;
-    margin-top: 10%;
-}
-
-
-
-header .navbar ul {
+<header>
+    <img class="logo" src="images/Logo.png" alt="Logo">
     
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    padding-top: 10%;
-}
 
-header .navbar ul li {
-    margin-left: 3rem;
-}
+    <div id="menu" class="fa fa-bars"></div>
 
-header .navbar ul li a {
-    color: #ffffff;
-    font-size: 1.7rem;
-}
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="index.html">Hem</a></li>
+            <li><a href="vadvigor.html">Vad vi gör</a></li>
+            <li><a href="hurfunkardet.html">Hur funkar det</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
-header .navbar ul li a.active,
-header .navbar ul li a:hover {
-    color: orange;
-}
+</header>
 
-#menu {
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
+<!-- header section ends -->
 
-.home {
-    padding-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 75vh;
-    overflow: hidden;
-    background-color: #07101c;
-    background-size: cover;
-    background-position: bottom;
-}
+<!-- home section starts  -->
 
-.home-logoextend {
-    padding-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 200px;
-    overflow: hidden;
-    background-color: #07101c;
-    background-size: cover;
-    background-position: bottom;
-}
+<section class="home" id="home">
 
-.home .image {
-    position: relative;
-    top: 7.5rem;
-}
+    <div class="content">
+        <h1>Behöver du restaurangpersonal ?</h1>
+        <h3>Vi finns här för dig!</h3>
+        <p>Restaurangbemanning, kockar, barista, servering och mycket mer. Vi jobbar med alla typer av evenemang och tillfällen för såväl företag som privatpersoner.</p>
+        <a href="#" class="btn">Boka Direkt</a>
+    </div>
 
-.home .image img {
-    width: 40rem;
-    border-radius: 50%;
-}
+    <div class="image">
+        <img src="images/upplägg.jpg" alt="">
+    </div>
 
-.home .content {
-    margin-top: 10rem;
-}
 
-.home .content span {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5rem;
-    color: rgb(255, 255, 255);
-}
-.home .content h1 {
-    font-family: 'playfair', sans-serif; /* Använd den nya fonten */
-    font-weight: 600; /* Justera vikten för en snyggare rubrik */
-    color: white; /* Behåll samma färg eller justera efter behov */
-    font-size: 2.5rem; /* Justera storleken efter behov */
-    text-align: left; /* Centrera texten */
-}
-.home .content h3 {
-    font-family: 'Playfair', sans-serif;
-    font-size: 4rem;
-    font-weight: 400;
-    color: #fff;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+</section>
 
-.home .content p {
-    font-size: 1.5rem;
-    color: #eee;
-}
+<!-- home section ends -->
 
-.home .btn {
-    color: #eee;
-}
+<!--small menu-->
 
-.small-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2% 5% 5% 5%;
-    color: #07101c;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-}
-.small-menu ul {
-    display: flex; /* Lägg till detta för att göra menyn horisontell */
-    list-style: none; /* Ta bort punktlistan */
-    padding: 0; /* Ta bort standard padding */
-    margin: 0; /* Ta bort standard margin */
-}
+<div class="small-menu">
 
-.small-menu ul li {
-    margin-left: 3rem; /* Samma avstånd som i headern */
-}
-.small-menu ul li a {
-    color: #07101c; /* Samma färg som texten i headern */
-    font-size: 1.7rem; /* Samma storlek som texten i headern */
-    text-decoration: none; /* Ta bort understrykning */
-}
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="index.html">Privata event</a></li>
+            <li><a href="vadvigor.html">Catering</a></li>
+            <li><a href="hurfunkardet.html">Restaurangbemanning</a></li>
+            <li><a href="galleri.html">Kurser</a></li>
+            <li><a href="kontakt.html">Konsultering</a></li>
+        </ul>
+    </nav>
 
-.small-menu ul li a:hover {
-    color: orange; /* Samma hover-effekt som i headern */
-}
-.center-headline {
-    
-    font-family: 'Playfair', sans-serif;
-    
-    font-weight: 400;
-   
-    text-align: center; /* Centrera texten horisontellt */
-    font-size: 4rem; /* Justera storleken efter behov */
-    
-    position: relative;
-    top: 50%; /* Flytta rubriken till mitten av skärmen vertikalt */
-    transform: translateY(-50%); /* Justera för att centrera exakt */
-    margin-top: 5%;
-}
-.swiper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.2rem;
-   margin-bottom: 1%;
-   aspect-ratio: 16 / 9;
-   height: 35rem;
-   width: 100%;
-   overflow: hidden;
-   
-  }
+</div>
+<h2 class="center-headline">Heta tips just nu</h2>
 
-  .swiper-slide {
-    position: relative;
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    
-  }
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/wedding.jpg"><div class="text-overlay"><h3>Bröllopsmiddag</h3> från 699:-pp</div></div>
+    <div class="swiper-slide"><img src="images/cafe.jpg"><div class="text-overlay">Gå en baristakurs från 799:-</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Midsommarbuffé från 999:-</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Asiatisk  matlagning i ditt kök</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+  </div>
   
- 
+  <div class="swiper-pagination"></div>
+</div>
 
-  .swiper-slide img {
-    display: block;
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    aspect-ratio: 16 / 9;
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 35,
+        },
+     
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- infogrid section starts  -->
 
-    width: 30rem;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 15px;
-    z-index: 0;
-    
-    }
-    .swiper-slide .text-overlay { /* Lägg till detta block */
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.5);
-        top: 62%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        z-index: 2;
+
+  
+<h2 class="center-headline">Populära paketbokningar</h2>
+          <div class="event-grid">
+              
+          
+    <div class="card stacked">
+      <img class="img-card" src="images/wedding.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Boka hela drömpaketet</h2>
+          <p class="card-price">Från 1999:-</p>
+          <p class="card-description">Hotell, lokal, mat och dryck. Vi håller på att planera ett fantastiskt paket för dig som vill boka en avslutande middag för dina vänner och familj.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/cafe.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Paketpris</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/wine (2).jpg">
+      <div class="card-content">
+          <h2 class="card-title">Middagspaket för två på hotell svanen</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/sushi.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Vår sushi-buffé</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/heart.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Bröllopsmiddag</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/food.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Står du utan kock??</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/event.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Mingeldags?</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/event-party.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Vår eventvagn är på plats!</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/dill-potatoes.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Midsommar med närodlat</h2>
+          <p class="card-price">1999:-</p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+    <div class="card stacked">
+        <img class="img-card" src="images/thomas-gamstaetter-IFGVE61AAno-unsplash.jpg">
+        <div class="card-content">
+            <h2 class="card-title">En smakrik rundtur på Ärstagård</h2>
+            <p class="card-price">1999:-</p>
+            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+        </div>
+      </div>
+      </div>
+      </section>
+  
+<!-- service section starts  -->
+<div class="service-container">
+<div class="service" id="service">
+
+ <h1 class="heading">Vad erbjuder vi?</h1>
+ <p class="description">Kvalitet och kundnöjdhet är vårt mål. Med många års erfarenhet inom hotell och restaurangbranschen kan vi garantera att du får en högklassig service och matlagning. Vi planerar med dig och håller tilldelat ansvar för att du som kund får en trygg och professionell service.</p>
+
+</div>
+<img src="images/kasia-derenda-HpKkTi0ThKM-unsplash.jpg" alt="">
+</div>
+<!-- service section ends -->
+<h2 class="center-headline">Tips på intressant läsning</h2>
+<div class="event-grid">
+            
         
-    }
-  .swiper-slide img:hover {
-    transform: scale(1.1);
-  }
+    <div class="card stacked">
+      <img class="img-card" src="images/wedding.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Det där gyllene tillfället</h2>
+          
+          <p class="card-description">Hon svarade JA, vad händer nu? Läs våra tips för en oförglömlig bröllopsmiddag</p>
+      </div>
+    </div>
   
-@media (max-width: 1024px) {
-    .swiper-slide {
-        font-size: 16px; /* Justera textstorleken för mindre skärmar */
-    }
-}
+    <div class="card stacked">
+      <img class="img-card" src="images/cafe.jpg">
+      <div class="card-content">
+          <h2 class="card-title">Hur är livet som en barrista? Johan förklarar</h2>
+          <p class="card-price"></p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+    <div class="card stacked">
+      <img class="img-card" src="images/wine (2).jpg">
+      <div class="card-content">
+          <h2 class="card-title">Middag</h2>
+          <p class="card-price"></p>
+          <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+      </div>
+    </div>
+  
+  <div class="card stacked">
+    <img class="img-card" src="images/thomas-gamstaetter-IFGVE61AAno-unsplash.jpg">
+    <div class="card-content">
+        <h2 class="card-title">Ekologiskt, lokalt och säsongsvis</h2>
+        <p class="card-price"></p>
+        <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatum sit similique aliquam eius molestias.</p>
+    </div>
+  </div>
+</div>
+  
+  
+  
+  
+<!-- process section starts  -->
 
-@media (max-width: 768px) {
-    .swiper-slide {
-        font-size: 14px; /* Justera textstorleken för mindre skärmar */
-    }
-}
+<section class="process" id="process">
 
-@media (max-width: 480px) {
-    .swiper-slide {
-        font-size: 12px; /* Justera textstorleken för mindre skärmar */
-    }
-}
-
-.icons-container {
-    min-height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.icons-container .icons {
-    display: flex;
-    align-items: center;
-    margin: 3rem;
-    width: 23rem;
-}
-
-.icons-container .icons img {
-    width: 15rem;
-    padding: 0 1rem;
-}
-
-.icons-container .icons .info {
-    padding-left: 1rem;
-}
-
-.icons-container .icons .info h3 {
-    font-size: 2rem;
-    color: orange;
-    text-decoration: underline;
-    text-shadow: black;
-}
-
-.icons-container .icons .info p {
-    font-size: 1.2rem;
-    color: #666;
-    padding: 1rem;
-}
-
-.h2-event{
-    margin-bottom: 5rem;
-    font-family: 'Railway', sans-serif;
-}
-/* event grid */
-.event-grid{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-background-color: rgb(255, 255, 255);
-gap: 2rem;
-padding: 5%;
-margin: 0% 5% 5% 5%;
-border-radius: 15px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-/*
-.stacked{
-    display: grid;
-}
-
-.stacked > * {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-*/
-.card{
-    /*
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px 15px 0 0;    */
-    aspect-ratio: 1 / 1.3;
-    
+    <h1 class="heading-1">Enkelt och lätt att boka</h1>
+    <p class="description-1">Det ska inte vara komplicerat. Vet du vad du vill ha så rättar vi oss efter det. Är du osäker så hittar vi den bästa lösningen tillsammans utan någon extra kostnad.</p>
    
-}
- .card:hover {
-        transform: scale(1.05);
+    <div class="box-container">
+
+        <div class="box">
+            <span>1</span>
+            <h3>Välj vad du behöver</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nam id accusantium ea omnis consequuntur officiis, et veniam amet doloremque.</p>
+        </div>
+
+        <div class="box">
+            <span>2</span>
+            <h3>Bifoga övrig information</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nam id accusantium ea omnis consequuntur officiis, et veniam amet doloremque.</p>
+        </div>
+
+        <div class="box">
+            <span>3</span>
+            <h3>Vi sköter resten!</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nam id accusantium ea omnis consequuntur officiis, et veniam amet doloremque.</p>
+        </div>
+
+    </div>
+
+    <a href="#" class="btn">Boka Här</a>
+
+</section>
+
+<!-- process section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">Vad tycker andra om oss</h1>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nulla assumenda et laboriosam est pariatur minima sequi libero perferendis totam.</p>
+
+    <div class="box-container">
+
+        <div class="box">
+            <p>Bästa arbetsgivaren</p>
+            <h3>~Kalle kock</h3>
+            
+        </div>
+
+        <div class="box">
+            <p>Vi fick snabbt hjälp med kompetent personal, grymt!</p>
+            <h3>~Johan / Pas Dart</h3>
+            
+        </div>
+
+        <div class="box">
+            <p>Vårat 50års kalas blev sååå lyckat, tack Gastronomerna, ni är bäst.</p>
+            <h3>~Andreas</h3>
+            
+        </div>
+
+        <div class="box">
+            <p>Mycket nöjd!</p>
+            <h3>~Sarah Servis</h3>
+            
+        </div>
         
-    }
-    
-.card-content{
-align-self: end;
-margin: 0.5rem 1rem 2rem ;
-padding: 0.5rem;
-
-
-/*
-background-color: rgba(255, 255, 255, 0.719);
-*/
-}
-
-.img-card{
-    width: 100%;
-    aspect-ratio: 1 / 1 ;
-    border-radius: 15px;
-    object-fit: cover;
-}
-.card-title{
-    
-    font-size: medium;
-}
-.card-price{
-    font-size: 1.75rem;
-}
-
-.card.span-row{
-    grid-row: span 2;
-    
-}
-
-.card.span-column{
-    
-    grid-column: span 2;
-}
-
-
-
-
-
-
-.service {
-    
-    margin: 5%;
-    border-radius: 25px;
-    padding: 5%;
-}
-
-.service-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    padding: 2rem 0;
-}
-.service-container img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-    
-
-
-
-
-
-.process {
-    background: whitesmoke;
-    color: #07101c;
-    text-align: center;
-}
-
-.process .box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-}
-
-.process .box-container .box {
-    margin: 1.5rem;
-    padding: 3rem;
-    background: #07101c;
-    border: .1rem solid rgb(0, 0, 0);
-    margin-top: 5rem;
-    width: 32rem;
-    flex-wrap: wrap;
-}
-
-.process .box-container .box span {
-    color: white;
-    border: .1rem solid;
-    display: block;
-    height: 6rem;
-    width: 6rem;
-    line-height: 6rem;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 2.5rem;
-    background: #1f2020;
-    margin: 0 auto;
-    margin-top: -6rem;
-}
-
-.process .box-container .box h3 {
-    color: white;
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-decoration: underline;
-}
-
-.process .box-container .box p {
-    color: white;
-    font-size: 1.2rem;
-    padding: 1rem;
-    flex-wrap: wrap;
-}
-
-.process .btn {
-    background: white;
-    color: black;
-    margin-bottom: 4rem;
-}
-
-.process .btn:hover {
-    opacity: none;
-    background-color: #07101c;
-    color: orange;
-}
-
-.review {
-    background-color: #07101c;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.review .heading {
-    color: orange;
-}
-
-.review .description {
-    color: #eee;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
-
-.review .box-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-}
-
-.review .box-container .box {
-    width: 35rem;
-    background: whitesmoke;
-    padding: 2rem;
-    margin: 2rem;
-    margin-bottom: 10rem;
-    position: relative;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 1px;
-}
-
-.review .box-container .box img {
-    position: absolute;
-    bottom: -8.5rem;
-    left: -1.5rem;
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    border: .3rem solid orange;
-    object-fit: cover;
-}
-
-.review .box-container .box p {
-    font-size: 1.3rem;
-    color: #999;
-}
-
-.review .box-container .box h3 {
-    font-size: 1.6rem;
-    color: black;
-    text-align: end;
-}
-
-.review .box-container .box::before {
-    content: '';
-    position: absolute;
-    bottom: -1rem;
-    left: .4rem;
-    background: white;
-    height: 2rem;
-    width: 2rem;
-    transform: rotate(45deg);
-}
-
-.contact {
-    background: #f0f0f0;
-    padding-bottom: 4rem;
-}
-
-.contact .box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact .box-container .box {
-    width: 30rem;
-    background: #fff;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    text-align: center;
-    padding: 2rem;
-    margin: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact .box-container .box i {
-    font-size: 4rem;
-    color: var(--blue);
-}
-
-.contact .box-container .box h3 {
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: #666;
-}
-
-.contact .box-container .box p {
-    font-size: 1.5rem;
-    color: #999;
-}
-
-.contact form {
-    background: #fff;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    padding: 2rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact form .box {
-    width: 48%;
-    padding: 1rem 0;
-    margin: 1rem 0;
-    font-size: 1.5rem;
-    color: var(--blue);
-    text-transform: none;
-    border-bottom: .2rem solid rgba(0, 0, 0, .1);
-}
-
-.contact form .box::placeholder {
-    text-transform: capitalize;
-}
-
-.contact form .message {
-    height: 15rem;
-    resize: none;
-    width: 100%;
-}
-
-.contact form .box:focus {
-    border-color: #07101c;
-}
-
-.contact form .btn {
-    background: white;
-    cursor: pointer;
-    color: #07101c;
-    border-color: black;
-}
-
-.scroll-top img {
-    height: 7rem;
-}
-
-
-
-
-
-.vadvigor{
-    background: #07101c;
-}
-
-.vadvigor .box-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-
-    
-    
-}
-
-.vadvigor .box-container .box{
-    background:whitesmoke;
-    border:.1rem solid rgba(0,0,0,.1);
-    margin: 2rem;
-    
-    
-    width:95%rem;
-    border-radius: 20px;
-    color: black;
-    
-}
-
-.vadvigor .box-container .box:hover{
-    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
-    box-shadow: 2 1rem 2rem rgba(255, 255, 255, 0.5);
-}
-/*
-.service .box-container .box img{
-    width:7rem;
-    margin:2rem 0;
-}
-*/
-.vadvigor .box-container .box h3{
-    text-align: center;
-    font-size: 3rem;
-    color: black;
-    padding: 1em;
-    text-decoration: underline;
-    
-}
-
-.vadvigor .box-container .box p{
-    font-size: 1.4rem;
-    color: black;
-    padding:1rem 0;
-}
-
-.process{
-    background:whitesmoke;
-    color: #07101c;
-    text-align: center;
-    
-}
-
-.process .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-    
-}
-
-.process .box-container .box{
-    margin:1.5rem;
-    padding:3rem;
-    background:#07101c;
-    border:.1rem solid rgb(0, 0, 0);
-    margin-top: 5rem;
-    width:32rem;
-    
-    flex-wrap: wrap;
-}
-
-.process .box-container .box span{
-    color:white;
-    border:.1rem solid;
-    display: block;
-    height:6rem;
-    width:6rem;
-    line-height: 6rem;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 2.5rem;
-    background:#1f2020;
-    margin:0 auto;
-    margin-top: -6rem;
-}
-
-.process .box-container .box h3{
-    color:white;
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-decoration: underline;
-}
-
-.process .box-container .box p{
-    color:white;
-    font-size: 1.2rem;
-    padding:1rem;
-    flex-wrap: wrap;
-}
-
-.process .btn{
-    background:white;
-    color:black;
-    margin-bottom: 4rem;
-}
-
-.process .btn:hover{
-    opacity: none;
-    background-color: #07101c;
-    color: orange;
-}
-
-.review{
-    background-color: #07101c;
-   /* background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/review-bg.jpg) no-repeat;
-    */
-   background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.review .heading{
-    color:orange;
-}
-
-.review .description{
-    color:#eee;
-    padding:1rem;
-    font-size: 1.5rem;
-}
-
-.review .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-}
-
-.review .box-container .box{
-    width:35rem;
-    background:whitesmoke;
-    padding:2rem;
-    margin:2rem;
-    margin-bottom: 10rem;
-    position: relative;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 1px;
-
-}
-
-.review .box-container .box img{
-    position: absolute;
-    bottom:-8.5rem; left:-1.5rem;
-    height:6rem;
-    width:6rem;
-    border-radius: 50%;
-    border:.3rem solid orange;
-    object-fit: cover;
-}
-
-.review .box-container .box p{
-    font-size: 1.3rem;
-    color:#999;
-}
-
-.review .box-container .box h3{
-    font-size: 1.6rem;
-    color: black;
-    text-align: end;
-}
-
-.review .box-container .box::before{
-    content: '';
-    position: absolute;
-    bottom:-1rem; left:.4rem;
-    background:white;
-    height:2rem;
-    width:2rem;
-    transform:rotate(45deg);
-}
-
-.contact{
-    background:#f0f0f0;
-    padding-bottom: 4rem;
-}
-
-.contact .box-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact .box-container .box{
-    width:30rem;
-    background:#fff;
-    border:.1rem solid rgba(0,0,0,.1);
-    text-align: center;
-    padding:2rem;
-    margin:2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact .box-container .box i{
-    font-size: 4rem;
-    color:var(--blue);
-}
-
-.contact .box-container .box h3{
-    padding:1rem 0;
-    font-size: 2rem;
-    color:#666;
-}
-
-.contact .box-container .box p{
-    font-size: 1.5rem;
-    color:#999;
-}
-
-.contact form{
-    background:#fff;
-    border:.1rem solid rgba(0,0,0,.1);
-    padding:2rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact form .box{
-    width:48%;
-    padding:1rem 0;
-    margin:1rem 0;
-    font-size: 1.5rem;
-    color:var(--blue);
-    text-transform: none;
-    border-bottom: .2rem solid rgba(0,0,0,.1);
-    
-}
-
-.contact form .box::placeholder{
-    text-transform: capitalize;
-}
-
-.contact form .message{
-    height:15rem;
-    resize: none;
-    width:100%;
-}
-
-.contact form .box:focus{
-    border-color:#07101c;
-}
-.contact form .btn{
-    background:white;
-    cursor: pointer;
-    color: #07101c;
-    border-color: black;
-}
-
-
-
-
-
-.scroll-top img{
-    height:7rem;
-}
-
- 
-.flikar-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: -50px; /* Justera detta värde för att få flikarna att sticka ut mer eller mindre */
-    padding: 0 9%;
-  }
-  
-  .flik {
-    background-color: #07101c;
-    color: #ffffff;
-    padding: 15px 30px;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .flik h3 {
-    font-size: 1.8rem;
-    margin: 0;
-  }
-  
-  .flik:hover {
-    background-color: orange;
-    transform: translateY(-5px);
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries  */
-
-
-
-  
-  @media (max-width: 768px) {
-    .flikar-container {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-  
-    .flik {
-      margin-bottom: 10px;
-      width: 80%;
-      text-align: center;
-    }
-  }
-
-.icons-container{
-    min-height: auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.icons-container .icons{
-    display: flex;
-    align-items: center;
-    margin:3rem;
-    width:23rem;
-}
-
-.icons-container .icons img{
-    width:15rem;
-    padding:0 1rem;
-}
-
-.icons-container .icons .info{
-    padding-left: 1rem;
-}
-
-.icons-container .icons .info h3{
-    font-size: 2rem;
-    color: orange;
-    text-decoration: underline;
-    text-shadow: black;
-}
-
-.icons-container .icons .info p{
-    font-size: 1.2rem;
-    color:#666;
-}
-
-.service{
-    background: #07101c;
-}
-
-
-
-
-    
-
-
-
-
-
-.vadvigor .box-container .box p{
-    font-size: 1.4rem;
-    color: black;
-    padding:1rem 0;
-}
-
-.process{
-    background:whitesmoke;
-    color: #07101c;
-    text-align: center;
-    
-}
-
-.process .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding:2rem 0;
-    
-}
-
-.process .box-container .box{
-    margin:1.5rem;
-    padding:3rem;
-    background:#07101c;
-    border:.1rem solid rgb(0, 0, 0);
-    margin-top: 5rem;
-    width:32rem;
-    
-    flex-wrap: wrap;
-}
-
-.process .box-container .box span{
-    color:white;
-    border:.1rem solid;
-    display: block;
-    height:6rem;
-    width:6rem;
-    line-height: 6rem;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 2.5rem;
-    background:#1f2020;
-    margin:0 auto;
-    margin-top: -6rem;
-}
-
-.process .box-container .box h3{
-    color:white;
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-decoration: underline;
-}
-
-.process .box-container .box p{
-    color:white;
-    font-size: 1.2rem;
-    padding:1rem;
-    flex-wrap: wrap;
-}
-
-.process .btn{
-    background:white;
-    color:black;
-    margin-bottom: 4rem;
-}
-
-.process .btn:hover{
-    opacity: none;
-    background-color: #07101c;
-    color: orange;
-}
-
-
-
-.footer{
-    background:#07101c;
-}
-
-.footer .box-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer .box-container .box{
-    margin:2rem;
-    flex:1 1 25rem;
-}
-
-.footer .box-container .box h3{
-    padding-bottom: 1rem;
-    font-size: 2.5rem;
-    color:orange;
-    text-decoration: underline;
-}
-
-.footer .box-container .box p{
-    font-size: 1.3rem;
-    color:#eee;
-    
-}
-
-.footer .box-container .box a{
-    font-size: 1.5rem;
-    color:#eee;
-    display: block;
-    padding:1rem 0;
-}
-
-.footer a:hover{
-    text-decoration: underline;
-}
-
-.footer .credit{
-    font-size: 2rem;
-    color:#333;
-    background:#f0f0f0;
-    text-align: center;
-    padding:2rem 1rem;
-    font-weight: normal;
-    
-
-      
-}
-
-.scroll-top{
-    position: fixed;
-    right:2rem; bottom:7.5rem;
-    z-index: 100;
-    display: none;
-}
-
-.scroll-top img{
-    height:7rem;
-}
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media queries  */
-
-@media (max-width:991px){
-
-    html{
-        font-size: 55%;
-    }
-
-    .description{
-        padding:1rem;
-        width: auto;
-        font-size: 1.5rem;
-    }
-
-}
-
-@media (max-width:768px){
-
-    #menu{
-        display: block;
-    }
-
-    header .navbar{
-        position: fixed;
-        top:6.5rem; left:0;
-        width:100%;
-        background:#07101c;
-        border-top: .2rem solid rgba(0,0,0,.1);
-        transform:scaleY(0);
-        transform-origin: top;
-        opacity: 0;
-    }
-
-    header .navbar ul{
-        flex-flow: column;
-        padding:2rem 0;
-    }
-
-    header .navbar ul li{
-        text-align: center;
-        width:100%;
-        margin:1rem 0;
-    }
-
-    header .navbar ul li a{
-        font-size: 2.5rem;
-        display: block;
-    }
-
-    .fa-times{
-        transform:rotate(90deg);
-    }
-
-    header .navbar.nav-toggle{
-        transform:scaleY(1);
-        opacity: 1;
-        display: block;
-    }
-
-    .home .image{
-        display: none;
-    }
-
-    .home .content{
-        text-align: center;
-    }
-
-}
-
-
-@media (max-width:550px){
-
-    section{
-        padding:0 3%;
-        padding-top: 7.5rem;
-    }
-
-    .home .content h3{
-        font-size: 3.5rem;
-    }
-
-    .home .content p{
-        font-size: 1.3rem;
-    }
-
-    .icons-container .icons{
-        width:100%;
-    }
-
-    .contact .box-container .box{
-        width:100%;
-        margin:1rem 0;
-    }
-
-    .contact form .box{
-        width:100%;
-    }
-
-}@media (max-width: 768px) {
-    #menu {
-        display: block;
-    }
-
-    .navbar {
-        display: none;
-    }
-
-    .navbar.nav-toggle {
-        display: block;
-    }
-
-}
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <h1 class="heading-1">Kontakta oss</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="far fa-map"></i>
+            <h3>Vi finns</h3>
+            <p>Stockholm</p>
+        </div>
+
+        <div class="box">
+            <i class="far fa-address-book"></i>
+            <h3>Telefon</h3>
+            <p>0720405690</p>
+            <p>0720405690</p>
+        </div>
+
+        <div class="box">
+            <i class="far fa-envelope"></i>
+            <h3>Email</h3>
+            <p>gastronomerna@gmail.com</p>
+        </div>
+
+    </div>
+
+    <form action="">
+
+        <input type="text" placeholder="Namn" class="box">
+        <input type="email" placeholder="E-mail" class="box">
+        <input type="number" placeholder="Telefon" class="box">
+        <input type="text" placeholder="Adress" class="box">
+        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Meddelande"></textarea>
+        <input type="submit" value="Skicka" class="btn">
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<div class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Varför ska du välja oss?</h3>
+            <p>Att boka våra tjänster är lika enkelt som att njuta av våra läckerheter. Besök vår hemsida där du kan fylla i en förfrågan med detaljer om ditt evenemang. Ange datum, tid, antal gäster och eventuella särskilda önskemål. Vårt team kommer sedan att kontakta dig för en personlig konsultation. Vi ser till att allt är skräddarsytt efter dina behov, från menyns utformning till serveringens stil. Välkommen att boka en smakupplevelse utöver det vanliga!</p>
+        </div>
+
+        <div class="box">
+            <h3>Vi finns i</h3>
+            <a href="#">Stockholm</a>
+            <a href="#">Österåker</a>
+            <a href="#">Vaxholm</a>
+            <a href="#">Norrtälje</a>
+        </div>
+
+        <div class="box">
+            <h3>Snabblänkar</h3>
+            <a href="#">Hem</a>
+            <a href="#">Vad vi gör</a>
+            <a href="#">Hur</a>
+            <a href="#">Recensioner</a>
+            <a href="#">Kontakt</a>
+        </div>
+
+        <div class="box">
+            <h3>Följ oss</h3>
+            <a href="#">youtube</a>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by Andreas Web och Design all rights reserved! </h1>
+
+</div>
+
+<!-- footer section ends -->
+
+<!-- scroll top  -->
+<a href="#home" class="scroll-top">
+    <img src="images/scroll-img.png" alt="">
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+ -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+
+</body>
+</html>
