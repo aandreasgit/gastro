@@ -175,11 +175,11 @@ header .navbar ul li a:hover {
     color: rgb(255, 255, 255);
 }
 .home .content h1 {
-    font-family: 'playfair', sans-serif; /* Använd den nya fonten */
-    font-weight: 600; /* Justera vikten för en snyggare rubrik */
-    color: white; /* Behåll samma färg eller justera efter behov */
-    font-size: 2.5rem; /* Justera storleken efter behov */
-    text-align: left; /* Centrera texten */
+    font-family: 'playfair', sans-serif; 
+    font-weight: 600; /
+    color: white;
+    font-size: 2.5rem; 
+    text-align: left;
 }
 .home .content h3 {
     font-family: 'Playfair', sans-serif;
@@ -200,21 +200,27 @@ header .navbar ul li a:hover {
 }
 
 .small-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2% 5% 5% 5%;
-    color: #07101c;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+    background: white;
+    margin: 5%;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
+
 .small-menu ul {
-    display: flex; /* Lägg till detta för att göra menyn horisontell */
-    list-style: none; /* Ta bort punktlistan */
-    padding: 0; /* Ta bort standard padding */
-    margin: 0; /* Ta bort standard margin */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
 }
 
 .small-menu ul li {
@@ -434,23 +440,36 @@ background-color: rgba(255, 255, 255, 0.719);
 
 .service {
     
-    margin: 5%;
-    border-radius: 25px;
-    padding: 5%;
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px
 }
 
 .service-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem; /
 }
 .service-container img{
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    min-width: 300px; 
+    max-height: 300px;
     object-fit: cover;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-    
+
 
 
 
@@ -870,119 +889,14 @@ background-color: rgba(255, 255, 255, 0.719);
     transform:rotate(45deg);
 }
 
-.contact{
-    background:#f0f0f0;
-    padding-bottom: 4rem;
-}
-
-.contact .box-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.contact .box-container .box{
-    width:30rem;
-    background:#fff;
-    border:.1rem solid rgba(0,0,0,.1);
-    text-align: center;
-    padding:2rem;
-    margin:2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact .box-container .box i{
-    font-size: 4rem;
-    color:var(--blue);
-}
-
-.contact .box-container .box h3{
-    padding:1rem 0;
-    font-size: 2rem;
-    color:#666;
-}
-
-.contact .box-container .box p{
-    font-size: 1.5rem;
-    color:#999;
-}
-
-.contact form{
-    background:#fff;
-    border:.1rem solid rgba(0,0,0,.1);
-    padding:2rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.contact form .box{
-    width:48%;
-    padding:1rem 0;
-    margin:1rem 0;
-    font-size: 1.5rem;
-    color:var(--blue);
-    text-transform: none;
-    border-bottom: .2rem solid rgba(0,0,0,.1);
-    
-}
-
-.contact form .box::placeholder{
-    text-transform: capitalize;
-}
-
-.contact form .message{
-    height:15rem;
-    resize: none;
-    width:100%;
-}
-
-.contact form .box:focus{
-    border-color:#07101c;
-}
-.contact form .btn{
-    background:white;
-    cursor: pointer;
-    color: #07101c;
-    border-color: black;
-}
-
-
-
-
+ 
 
 .scroll-top img{
     height:7rem;
 }
 
  
-.flikar-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: -50px; /* Justera detta värde för att få flikarna att sticka ut mer eller mindre */
-    padding: 0 9%;
-  }
-  
-  .flik {
-    background-color: #07101c;
-    color: #ffffff;
-    padding: 15px 30px;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .flik h3 {
-    font-size: 1.8rem;
-    margin: 0;
-  }
-  
-  .flik:hover {
-    background-color: orange;
-    transform: translateY(-5px);
-  }
+
 
 
 
@@ -1339,3 +1253,67 @@ background-color: rgba(255, 255, 255, 0.719);
     }
 
 }
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+  
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+  }
+  
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+  
+  .large-font {
+    font-size: 48px;
+  }
+  
+  .xlarge-font {
+    font-size: 64px
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #04AA6D;
+  }
+  
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+  .container{
+    margin: 5%;
+  }
+  .grey-background{
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  .large-text {
+    font-size: 1.5rem; /* Justera storleken efter behov */
+    line-height: 1.6; /* Förbättra läsbarheten */
+}
+  
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }

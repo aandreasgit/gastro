@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomerna - Catering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- header section starts  -->
+<header>
+    <img class="logo" src="images/Logo.png" alt="Logo">
+    <div id="menu" class="fa fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="index.html">Hem</a></li>
+            <li><a href="vadvigor.html">Vad vi gör</a></li>
+            <li><a href="hurfunkardet.html">Hur funkar det</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- header section ends -->
+<main>
+<!--small menu-->
+<h2 class="center-headline">Heta tips just nu</h2>
+<div class="small-menu">
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="event.html">Privata event</a></li>
+            <li><a class="active" href="catering.html">Catering</a></li>
+            <li><a href="hurfunkardet.html">Restaurangbemanning</a></li>
+            <li><a href="galleri.html">Kurser</a></li>
+            <li><a href="kontakt.html">Konsultering</a></li>
+            <li><a href="artiklar.html">Artiklar</a></li>
+        </ul>
+    </nav>
+
+</div>
+
+ <!-- The App Section -->
+ <div class="container">
+    <div class="row">
+      <div class="column-66">
+        <h1 class="xlarge-font"><b>Mingelkväll</b></h1>
+        <h1 class="large-font" style="color:MediumSeaGreen;"><b>Varför göra det själv?</b></h1>
+        <p class="large-text"><span style="font-size:36px">Servera mat som ett proffs.</span> Gör det enkelt för dig själv och låt oss ta hand om allting. Det viktigaste är att du får njuta av ditt evenemang utan att behöva bekymra dig om maten. Våra kockar står redo i köken och serverar upp en smakfull och varierad meny utefter dina önskemål. Enjoy!</p>
+        
+      </div>
+      <div class="column-33">
+          <img src="images/olives-770968_640.jpg" width="335" height="471">
+      </div>
+    </div>
+  </div>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/wedding.jpg"><div class="text-overlay"><h3>Bröllopsmiddag</h3> från 699:-pp</div></div>
+    <div class="swiper-slide"><img src="images/cafe.jpg"><div class="text-overlay">Gå en baristakurs från 799:-</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Midsommarbuffé från 999:-</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Asiatisk  matlagning i ditt kök</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
+  </div>
+  
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 35,
+        },
+     
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- infogrid section starts  -->
+<div style="text-align:center ">
+    <h2>Catering</h2>
+    <p>Luta dig tillbaka och låt oss ta hand om allting</p>
+  </div>
+
+  
+ 
+
+  
+</main>
+<!-- footer section starts  -->
+<div class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Varför ska du välja oss?</h3>
+            <p>Att boka våra tjänster är lika enkelt som att njuta av våra läckerheter. Besök vår hemsida där du kan fylla i en förfrågan med detaljer om ditt evenemang. Ange datum, tid, antal gäster och eventuella särskilda önskemål. Vårt team kommer sedan att kontakta dig för en personlig konsultation. Vi ser till att allt är skräddarsytt efter dina behov, från menyns utformning till serveringens stil. Välkommen att boka en smakupplevelse utöver det vanliga!</p>
+        </div>
+        <div class="box">
+            <h3>Vi finns i</h3>
+            <a href="#">Stockholm</a>
+            <a href="#">Österåker</a>
+            <a href="#">Vaxholm</a>
+            <a href="#">Norrtälje</a>
+        </div>
+        <div class="box">
+            <h3>Snabblänkar</h3>
+            <a href="#">Hem</a>
+            <a href="#">Vad vi gör</a>
+            <a href="#">Hur</a>
+            <a href="#">Recensioner</a>
+            <a href="#">Kontakt</a>
+        </div>
+        <div class="box">
+            <h3>Följ oss</h3>
+            <a href="#">youtube</a>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+        </div>
+    </div>
+    <h1 class="credit"> created by Andreas Web och Design all rights reserved! </h1>
+</div>
+<!-- footer section ends -->
+
+<!-- scroll top  -->
+<a href="#home" class="scroll-top">
+    <img src="images/scroll-img.png" alt="">
+</a>
+
+<!-- jquery cdn link -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>
