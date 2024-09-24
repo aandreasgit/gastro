@@ -108,14 +108,14 @@ header {
 
 header .logo {
     width: 25rem;
-    height: ;
+    
  padding-top: 10%;
- display: block;
+ 
  display: flex;
   }
   @media (max-width: 768px) {
     header .logo {
-        width: 10rem;
+        width: 20rem;
         margin-top: -10%;
     }
 
@@ -1404,6 +1404,8 @@ background-color: rgba(255, 255, 255, 0.719);
 .center-text {
     text-align: center;
 }
+
+
   
   .button {
     border: none;
@@ -1420,7 +1422,7 @@ background-color: rgba(255, 255, 255, 0.719);
     max-width: 100%;
   }
   .container{
-    margin: 5%;
+    margin: 10%;
   }
   .grey-background{
     background-color: #f1f1f1;
