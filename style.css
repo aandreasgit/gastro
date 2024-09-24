@@ -95,25 +95,31 @@ header {
     width: 100%;
     max-height: 100px;
     display: flex;
+    
     align-items: center;
     justify-content: space-between;
     background: #07101c;
     z-index: 1000;
     padding: 1.5rem 9%;
+    margin-bottom: 10%;
+    
     
 }
 
 header .logo {
-    width: 200px;
+    width: 25rem;
+    height: ;
  padding-top: 10%;
-  
- 
-    
-   
+ display: block;
+ display: flex;
+  }
+  @media (max-width: 768px) {
+    header .logo {
+        width: 10rem;
+        margin-top: -10%;
+    }
+
 }
-
-
-
 header .navbar ul {
     
     display: flex;
@@ -151,6 +157,7 @@ header .navbar ul li a:hover {
 .home {
     padding-bottom: 3rem;
     display: flex;
+    
     align-items: center;
     justify-content: space-between;
     min-height: 75vh;
@@ -183,6 +190,7 @@ header .navbar ul li a:hover {
 }
 
 .home .content {
+    
     margin-top: 10rem;
 }
 
@@ -223,7 +231,7 @@ header .navbar ul li a:hover {
    justify-content: center;
    align-items: center;
 
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     margin: 5%;
     padding: 10px;
     border-radius: 15px;
@@ -378,6 +386,13 @@ header .navbar ul li a:hover {
     }
   .swiper-slide img:hover {
     transform: scale(1.1);
+  }
+  .swiper-button-next, .swiper-button-prev {
+    color: orange;
+    
+    overflow: visible;
+    z-index: 1000;
+    
   }
   
 @media (max-width: 1024px) {
