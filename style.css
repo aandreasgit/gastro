@@ -32,6 +32,7 @@ html {
     color: orange;
 }
 
+
 section {
     min-height: 100vh;
     padding: 0 9%;
@@ -89,7 +90,7 @@ section {
 }
 
 header {
-    position: ;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -101,16 +102,16 @@ header {
     background: #07101c;
     z-index: 1000;
     padding: 1.5rem 9%;
-    margin-bottom: ;
+    
     
     
     
 }
 
 header .logo {
-    width: 30rem;
+    width: 40rem;
     
- padding-top: ;
+ 
  
  display: flex;
   }
@@ -158,12 +159,12 @@ header .navbar ul li a:hover {
 
 .home {
     
-    padding-bottom: ;
+    
     display: flex;
     
     align-items: center;
     justify-content: space-between;
-    min-height: ;
+    
     overflow: hidden;
     background-color: #07101c;
     background-size: cover;
@@ -175,27 +176,24 @@ header .navbar ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height:;
+    
     overflow: hidden;
     background-color: #07101c;
     background-size: cover;
-    background-position: ;
+    
 }
 
 .home .image {
     position: relative;
-    top: ;
+    
 }
 
 .home .image img {
     width: 40rem;
-    border-radius: ;
+    
 }
 
-.home .content {
-    
-    margin-top: ;
-}
+
 
 .home .content span {
     font-family: 'Poppins', sans-serif;
@@ -238,7 +236,7 @@ header .navbar ul li a:hover {
     margin-top: 5%;
     
     padding: 10px;
-    margin-top: ;
+    
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -1427,7 +1425,7 @@ background-color: rgba(255, 255, 255, 0.719);
     max-width: 100%;
   }
   .container{
-    margin: 10%;
+    margin: 5%;
   }
   .grey-background{
     background-color: #f1f1f1;
@@ -1546,6 +1544,9 @@ background-color: rgba(255, 255, 255, 0.719);
 .news-sidebar ul li a:hover{
     color: orange !important;
 }
+.news-sidebar ul li a:active {
+    color: orange !important;
+}
 .sliding-text-box { 
     overflow: hidden; 
     position:absolute;
@@ -1588,15 +1589,7 @@ background-color: rgba(255, 255, 255, 0.719);
     object-fit: cover;
     margin-left: 4rem;
 }
-.massa-bilder{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 4rem;
-    padding: 2rem;
-    margin: 10%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+
 .artikel-text{
 letter-spacing: 0.15rem;
 }
