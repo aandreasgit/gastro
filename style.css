@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
-    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
+   
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -16,7 +16,8 @@
     transition: all .2s linear;
 }
 
-html {
+html { 
+    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 62.5%;
     overflow-x: hidden;
 }
@@ -271,15 +272,17 @@ header .navbar ul li a:hover {
 
 }
 .dropdown-menu{
+    
     display: block;
     display: flex;
     
     display: none;
+    
 
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-bottom: 2%;
+    margin: 2%;
     margin-top: 5%;
     background: rgb(255, 255, 255, 0.5) ;
     
@@ -299,6 +302,7 @@ header .navbar ul li a:hover {
 .dropdown-menu li a:hover{
     color: orange;
 }
+
     /*    Responsive menu      */
 
    @media (max-width: 768px) {
@@ -1372,6 +1376,11 @@ background-color: rgba(255, 255, 255, 0.719);
     display: table;
     clear: both
   }
+  .columns{
+    
+    column-count: 2;
+    
+  }
   
   .column-66 {
     float: left;
@@ -1394,6 +1403,16 @@ background-color: rgba(255, 255, 255, 0.719);
     font-size: 8rem;
     
  }
+ .xlarge-font-news {
+    color: #07101c;
+    font-size: 7rem;
+    
+    font-family: "playfair display" , serif !important;
+    font-style: italic;
+    font-optical-sizing: auto;
+   
+ }
+
 
    .large-text {
     font-size: 1.8rem;
@@ -1404,6 +1423,41 @@ background-color: rgba(255, 255, 255, 0.719);
     font-size: 2rem;
     line-height: 1.6; 
 }
+  
+  @media (max-width: 768px) {
+    .large-text {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .large-font {
+      font-size: 2.5rem;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .xlarge-font {
+      font-size: 3rem;
+      
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .larger-text {
+      font-size: 2rem;
+      
+    }
+  }
+  @media (min-width: 768px) {
+    .large-subline {
+      font-size: 4rem;
+      
+    }
+  }
+  
+  
 .center-text {
     text-align: center;
 }
@@ -1439,6 +1493,8 @@ background-color: rgba(255, 255, 255, 0.719);
       width: 100%;
       text-align: center;
       word-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
     img {
       margin: auto;
@@ -1484,6 +1540,7 @@ background-color: rgba(255, 255, 255, 0.719);
 .news{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    
 
 }
 @media screen and (max-width: 768px) {
@@ -1511,6 +1568,8 @@ background-color: rgba(255, 255, 255, 0.719);
 }
 .news-sidebar{
     display: grid;
+   
+    
     
     margin: 2rem;
     padding: 2rem;
