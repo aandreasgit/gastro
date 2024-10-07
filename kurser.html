@@ -15,7 +15,8 @@
     
 <!-- header section starts  -->
 <header>
-    <img class="logo" src="images/logo-tjock-cropped.png" alt="Logo">
+  <a href="index.html">
+    <img class="logo" src="images/logo-tjock-cropped.png" alt="Logo"></a>
     <div id="menu" class="fa fa-bars"></div>
     <nav class="navbar">
         <ul>
@@ -52,221 +53,33 @@
           <li><a href="artiklar.html">Artiklar</a></li>
       </ul>
   </div>
+    </div>     
+  <section>
+    <div class="kurs-ruta">
+        <h2>Matlagningskurs för en person</h2><br>
+        <p>Här får du i några timmar njuta av både mat och matlagning på högsta nivå. Välj mellan olika teman och finn ny inspiration i köket. Kavla upp ärmarna och lär dig nya vägar till underbara dofter och smaker.</p><br><br>
+        <div class="pris-ruta">
+            <h3>Pris: 299,-</h3>
     </div>
-    
+    </div>
+    <div class="kurs-ruta">
+      <h2>Matlagningskurs för en liten grupp</h2><br>
+      <p>Upplev kulinarisk magi: Lär dig laga mat med experter och skapa smakfulla mästerverk.<br> Vi tillagar tillsammans en trerätters meny med livliga färger och smakfulla kombinationer. Lär dig att kombinera salt, syra, sötma, bitterhet samt umami. </p><br>
+      <div class="pris-ruta">
+          <h3>Pris: 299,-</h3>
+  </div>
+  </div>
+  <div class="kurs-ruta">
+    <h2>En kursi sushi</h2><br>
+    <p>Sushi är en konst i sig och här får du möjligheten att lära dig hemligheterna bakom de fantastiskt goda sushirullarna med tillbehör. Allt ifrån att koka riset till perfektion till att skära fisk som en ninja!</p><br>
+    <div class="pris-ruta">
+        <h3>Pris: 299,-</h3>
+</div>
+</div>
+  </section>
    
-    
-        <style>
-.swiper {
-    display: none;
-}
+   
+   
 
-        @media (max-width: 768px) {
-        .swiper {
-            display: block;
-            width: 100%;
-            height: 100%;
-            margin-top: 6rem;
-            
-          }}
-          @media (max-width: 768px) {
-          .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .content{
-            font-size: 5rem;
-            font-family: 'Playfair Display', serif;
-          }
-          .menu {
-            min-width: 100px;
-            width: 70%;
-            max-width: 320px;
-      
-            background-color: #07101c;
-            color: #fff;
-          }
-          .menu ul{
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-          }
-          .menu ul li{
-            padding: 1rem;
-            color: #fff;
-          }
-          .menu ul li a{
-            text-decoration: none;
-            color: #fff;
-          }
-      
-          .content {
-            width: 100%;
-          }
-      
-          .menu-button {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-      
-            padding: 15px;
-      
-            cursor: pointer;
-      
-            -webkit-transition: 0.3s;
-            transition: 0.3s;
-      
-            background-color: #07101c;
-      
-            margin: 14px;
-                  border-radius: 5px;
-          }
-      
-          .menu-button .bar:nth-of-type(1) {
-            margin-top: 0px;
-          }
-      
-          .menu-button .bar:nth-of-type(3) {
-            margin-bottom: 0px;
-          }
-      
-          .bar {
-            position: relative;
-            display: block;
-      
-            width: 50px;
-            height: 5px;
-      
-            margin: 10px auto;
-            background-color: #fff;
-      
-            border-radius: 10px;
-      
-            -webkit-transition: 0.3s;
-            transition: 0.3s;
-          }
-      
-          .menu-button:hover .bar:nth-of-type(1) {
-            -webkit-transform: translateY(1.5px) rotate(-4.5deg);
-            -ms-transform: translateY(1.5px) rotate(-4.5deg);
-            transform: translateY(1.5px) rotate(-4.5deg);
-          }
-      
-          .menu-button:hover .bar:nth-of-type(2) {
-            opacity: 0.9;
-          }
-      
-          .menu-button:hover .bar:nth-of-type(3) {
-            -webkit-transform: translateY(-1.5px) rotate(4.5deg);
-            -ms-transform: translateY(-1.5px) rotate(4.5deg);
-            transform: translateY(-1.5px) rotate(4.5deg);
-          }
-      
-          .cross .bar:nth-of-type(1) {
-            -webkit-transform: translateY(15px) rotate(-45deg);
-            -ms-transform: translateY(15px) rotate(-45deg);
-            transform: translateY(15px) rotate(-45deg);
-          }
-      
-          .cross .bar:nth-of-type(2) {
-            opacity: 0;
-          }
-      
-          .cross .bar:nth-of-type(3) {
-            -webkit-transform: translateY(-15px) rotate(45deg);
-            -ms-transform: translateY(-15px) rotate(45deg);
-            transform: translateY(-15px) rotate(45deg);
-          }
-      
-          .cross:hover .bar:nth-of-type(1) {
-            -webkit-transform: translateY(13.5px) rotate(-40.5deg);
-            -ms-transform: translateY(13.5px) rotate(-40.5deg);
-            transform: translateY(13.5px) rotate(-40.5deg);
-          }
-      
-          .cross:hover .bar:nth-of-type(2) {
-            opacity: 0.1;
-          }
-      
-          .cross:hover .bar:nth-of-type(3) {
-            -webkit-transform: translateY(-13.5px) rotate(40.5deg);
-            -ms-transform: translateY(-13.5px) rotate(40.5deg);
-            transform: translateY(-13.5px) rotate(40.5deg);
-          }
-          
-          
-          }
-        </style>
-      
-      
-      
-        <!-- Swiper -->
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide menu">   <ul>
-                <li><a href="event.html">Privata event</a></li>
-                <li><a href="catering.html">Catering</a></li>
-                <li><a href="restaurangbemanning.html">Restaurangbemanning</a></li>
-                <li><a class="active" href="kurser.html">Kurser</a></li>
-                <li><a href="konsultering.html">Konsultering</a></li>
-                <li><a href="artiklar.html">Artiklar</a></li>
-            </ul></div>
-         
-            <div class="swiper-slide content">
-              <div class="menu-button">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-              </div>
-              Kurser
-            </div>
-          </div>
-        </div>
-      
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      
-        <!-- Initialize Swiper -->
-        <script>
-          var menuButton = document.querySelector('.menu-button');
-          var openMenu = function () {
-            swiper.slidePrev();
-          };
-          var swiper = new Swiper('.swiper', {
-            slidesPerView: 'auto',
-            initialSlide: 1,
-            resistanceRatio: 0,
-            slideToClickedSlide: true,
-            on: {
-              slideChangeTransitionStart: function () {
-                var slider = this;
-                if (slider.activeIndex === 0) {
-                  menuButton.classList.add('cross');
-                  // required because of slideToClickedSlide
-                  menuButton.removeEventListener('click', openMenu, true);
-                } else {
-                  menuButton.classList.remove('cross');
-                }
-              },
-              slideChangeTransitionEnd: function () {
-                var slider = this;
-                if (slider.activeIndex === 1) {
-                  menuButton.addEventListener('click', openMenu, true);
-                }
-              },
-            },
-          });
-        </script>
-     <section>
- <div class="center-headline">
-    <h2>Kurser</h2>
-    <p>Uppdateras snart, håll utkik!</p>
- </div>
-
-    </section>
 </main>
  
