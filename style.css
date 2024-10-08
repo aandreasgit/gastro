@@ -1366,7 +1366,15 @@ background-color: #07101c;
     }
 
 }
-
+@media (max-width: 900px) {
+    .xlarge-font b {
+      display: none;
+    }
+    .xlarge-font:after {
+      content: "Bemanning";
+      font-size: 7rem; /* match the original font size */
+    }
+  }
 
 @media (max-width:550px){
 
@@ -1598,6 +1606,7 @@ background-color: #07101c;
       grid-column: auto;
       grid-row: auto;
     }
+    
   }
 .news-now{
     display: grid;
@@ -1648,9 +1657,11 @@ background-color: #07101c;
 .news-sidebar ul li a:hover{
     color: orange !important;
 }
-.news-sidebar ul li a:active {
+.news-sidebar ul li a.active {
     color: orange !important;
 }
+
+
 .sliding-text-box { 
     overflow: hidden; 
     position:absolute;
@@ -1681,12 +1692,14 @@ background-color: #07101c;
     font-size: 2rem;
     color: black;
     text-decoration: underline;
+    padding: 1rem;
     
 }
 .news-img{
     width: 100%;
     height: auto;
     object-fit: cover;
+    margin-bottom: 5%;
 }
 .img-fluid{
     width: 80%;
@@ -1733,3 +1746,6 @@ letter-spacing: 0.15rem;
 .pris-ruta h3{
     text-align: center;
 }
+a:visited {
+    color: inherit;
+  }
