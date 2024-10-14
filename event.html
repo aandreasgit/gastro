@@ -114,20 +114,18 @@ Vill du veta mer om våra tjänster eller boka en kock? Tveka inte att kontakta 
 <!-- Swiper -->
 <div class="swiper mySwiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="images/wedding.jpg"><div class="text-overlay"><h3>Bröllopsmiddag</h3> från 699:-pp</div></div>
-    <div class="swiper-slide"><img src="images/cafe.jpg"><div class="text-overlay">Gå en baristakurs från 799:-</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Midsommarbuffé från 999:-</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Asiatisk  matlagning i ditt kök</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
-    <div class="swiper-slide"><img src="images/wine (2).jpg"><div class="text-overlay">Middag och pris</div></div>
-  </div>
+    <div class="swiper-slide"><a href="catering.html"><img src="images/wedding.jpg"><div class="text-overlay"><h3>Bröllopsmiddag</h3> från 599:-pp</div></a></div>
+    <div class="swiper-slide"><a href="kurser.html"><img src="images/cafe.jpg"><div class="text-overlay">Gå en baristakurs från 799:-</div></div>
+    <div class="swiper-slide"><a href="artikel-julbord.html"><img src="images/Julbord.jpg"><div class="text-overlay">Julbord från 349:-</div></a></div>
+    <div class="swiper-slide"><a href="catering.html"><img src="images/sushi.jpg"><div class="text-overlay">Asiatisk  matlagning i ditt kök</div></a></div>
+    <div class="swiper-slide"><a href="catering.html"><img src="images/wine (2).jpg"><div class="text-overlay">Företagsfest</div></a></div>
   
+  </div>
+  <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   <div class="swiper-pagination"></div>
 </div>
-
+</section>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -135,9 +133,18 @@ Vill du veta mer om våra tjänster eller boka en kock? Tveka inte att kontakta 
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       spaceBetween: 10,
+      loop: true, 
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
       breakpoints: {
         640: {

@@ -1378,8 +1378,8 @@ background-color: #07101c;
       display: none;
     }
     .xlarge-font:after {
-      content: "Bemanning";
-      font-size: 7rem; /* match the original font size */
+      
+      font-size: 7rem; 
     }
   }
 
