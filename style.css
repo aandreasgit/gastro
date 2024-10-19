@@ -47,6 +47,7 @@ p{
 
 section {
     min-height: 100vh;
+    min-width: 100%;
     padding: 0 9%;
     padding-top: 7.5rem;
 }
@@ -642,6 +643,7 @@ background-color: #07101c;
     background: whitesmoke;
     color: #07101c;
     text-align: center;
+    width: 100% !important;
 }
 
 .process .box-container {
@@ -1223,6 +1225,7 @@ background-color: #07101c;
 .footer{
     background:#07101c;
     margin-top: 10%;
+    width: 100%;
 }
 
 .footer .box-container{
