@@ -1759,3 +1759,8 @@ letter-spacing: 0.15rem;
 a:visited {
     color: inherit;
   }
+.contact-section{
+    font-size: medium;
+    margin-bottom: 5%;
+}
+
